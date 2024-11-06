@@ -1,0 +1,71 @@
+Componentes requeridos:
+
+    1. Ventana flotante:
+        - Generar constante que almance el titulo de la ventana, el texto que se mostrara en la ventana, el texto debera mostrarse con una animacion de escritura,
+        - Debera tener un boton de cerrar (dependiendo de que se este mostrando en la pantalla se podra cerrar o no se podra cerrar)
+    
+    2. Notificacion:
+        - Generar constante que almacene nombre de usuario que se mostrara en la notificacion, que guarde el texto y se trunque dependiende de si pase de la cantidad de caracteres maxima para que se no desborde de la pantalla (MessageTruncated), agregar un timestap de la hora en la que envia el mensaje
+        - Cuando se clickee se debera mostrar el nombre de la persona y el texto completo de lo que se envia en una burburja de chat
+    
+    3. Burbujas de chat:
+        - Se necesitara una burbuja de chat con pico (como en wsp)
+        - Si la burbuja es de un mensaje recibido se debera mostrar con el pico en la parte izquierda, si no, se mostrara con el pico a la derecha
+    
+    4. Chat:
+        - Se necesitara una chat que muestre las burbujas de chat 
+        - Este chat se abrira con cada notificacion que se muestre y de primer mensaje debera mostrar el mensaje de la notificacion.
+        - Se necesitara un input (con texto prestablecido) y un boton de enviar
+
+    5. Ventanas de dialogo (Terminal estilo kitty):
+        - Se necesitara una ventana de dialogo con el personaje Sailor Moon fumando que se comunicara con el usuario que interactua con la experiencia, dandole consejos, una que otra palabra de motivacion
+        - Los textos de comunicacion de guardaran en una constante
+        - Se necesitara un video de Sailor moon fumando en bucle 
+        - Cuando aparezca el texto de Sailor Moon se mostrara el texto en una animacion de escritura
+        - Las ventanas de dialogo apareceran dependiendo del momento de la escena en la que estemos
+
+Escenas:
+
+Para hacer el manejo de escenas se guardaran todas en una constante objeto, donde se guarde la escena con el valor de la siguiente escena 
+
+    1. Home:
+        - Se mostrara un mensaje principal de apoyo motivacional y recordando que es solo una aventura interactiva
+        - Se mostrara un boton que dara inicio a la aventura
+
+    2. Primera escena:
+        - Se mostrara una notificacion que aparezca en la parte baja que inicie preguntando al usuario si ira a la fiesta de esta noche.
+        - Luego cuando el usuario clickee en el se mostrara el chat correspondiente a ese usuario con el input con un mensaje por defecto que muestre lo que el usuario va a enviar, luego se simulara una respuesta de parte del otro usuario que diga algo de que una chica ira a la fiesta
+        - La escena terminara cuando el usuario cierre el chat
+    
+    2. Segunda escena:
+        - Cuando se cierre el chat se debera mostrar una ventana flotante en la parte izquierda que muestre un mensaje de alerta de virus
+        - Luego de que el usuario intente cerrar la ventana del mensaje del virus, aparezca otra notificacion que empiece con sea de un numero desconocido pidiendole disculpas por lo que paso.  
+        - Cuando el usuario cierre el chat se debera mostrar Luego saldran otras 2 ventanas, una de ellas tendra un mensaje de compra de un auto que diga : "Te sientes solo? Prueba jugar este juego" y que la imagen sea de una waifu con pixeles en los senos y de una manera erotica. 
+        - la escena terminara cuando el usuario cierre la ventana con la waifu
+
+    3. Tercera escena:
+        - luego se mostrara la terminal con Sailor Mooon que salude al usuario y le diga que deberia descargar un antivirus
+        - luego se mostrara una ventana para la compra del antivirus con un boton de descarga
+        - Cuando el usuario pulse el botton de descarga se cerraran todas las ventanas
+        - CUando se cierren las ventanas saldra una ventana con una carita triste
+        - Luego una secuencia de Ventanas que digan cosas como: porque quieres acabar con la existencia del unico ser que te conoce mas que incluso tu mismo.
+        - Una de esas ventanas dira: "Patetico", tendra un boton con la pregunta: "A que te refires?".
+        - Cuando el usuario pulse ese boton se quitara la ventana y saldra la ventana del antivirus con una barra de descarga en movimiento.
+        - CUando la barra complete el 100% se cerrara la ventana
+
+    4. Cuarta escena:
+        - Llegara una notificacion  que diga: "No puedes escapar y una barra negra haciendo alucion a que es el nombre del usuario.
+        - cuando el usuario abra la notificacion saldra una ventana que con una imagen rara ( despues miro que imagenes coloco ) y que diga, no importa que hagas o que trates de hacer, nunca saldras del poso en el que estas por no hacer nada para mejorar al respecto.
+        - luego de que el usuario cierre la ventana. Saldra el chat principal de la invitacion a la fiesta.
+        - luego saldra una ventana con una cara triste que diga: "Ves?, Patetico".
+        - Otra que diga: "Jamas saldras de la mierda en la que estas por la mierda que no haces."
+        - Otra que diga: "Eres igual que todos... Una maldita desepcion... Patetico." y tenga un boton que diga: "Tienes razon..."
+        - La escena terminara cuando el usuario pulse ese boton 
+
+    5. Quinta escena:
+        - Se quitara todo de la pantalla y quedara completamente negra para despues mostrar a sailor moon en la terminal queriendo ayudar a eliminar ese virus y darte un mensaje motivacional.
+        - Cuando sailor moon te empiece a dar los pasos para eliminar el virus, te llegara una notificacion que sea de la chica y cuando el usuario la pulse se vaya la terminal y aparezcan ventanas con mensajes de que ella le fue infiel y que ella no lo quiere y se va a quedar solo
+        - Mientras eso pasa el fondo parpadeara mucho y las ventanas estaran apareciendo de manera aleatoria y locas
+        - Luego todo se quitara y saldra una ventana de eliminando virus...
+
+    6. EN PROCESO...
