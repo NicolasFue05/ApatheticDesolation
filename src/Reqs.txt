@@ -4,7 +4,7 @@ Componentes requeridos:
         - Generar constante que almance el titulo de la ventana, el texto que se mostrara en la ventana, el texto debera mostrarse con una animacion de escritura,
         - Debera tener un boton de cerrar (dependiendo de que se este mostrando en la pantalla se podra cerrar o no se podra cerrar)
     
-    2. Notificacion:
+    2. Notificacion (Draggable):
         - Generar constante que almacene nombre de usuario que se mostrara en la notificacion, que guarde el texto y se trunque dependiende de si pase de la cantidad de caracteres maxima para que se no desborde de la pantalla (MessageTruncated), agregar un timestap de la hora en la que envia el mensaje
         - Cuando se clickee se debera mostrar el nombre de la persona y el texto completo de lo que se envia en una burburja de chat
     
