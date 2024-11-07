@@ -1,8 +1,9 @@
 import React from 'react';
+import './Notification.css'
 
-export function Notification({ Username, Message, Time = 'Now' }) {
+export function Notification({ Username, Message, Time = 'Now', className }) {
     return(
-        <div className="Notification">
+        <div className={`Notification ${className}`}>
             <div className="username-time">
                 <div className="username">@{Username}</div>
                 <div className="time">{Time}</div>
