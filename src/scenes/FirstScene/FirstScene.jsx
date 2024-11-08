@@ -6,7 +6,7 @@ import { FloatingWindow } from '../../components/Window/FloatingWindow.jsx';
 
 import './FirstScene.css';
 
-function FirstScene() {
+function FirstScene({ onSceneChange }) {
     const [isHidden, setIsHidden] = useState(false); 
     const [showChat, setShowChat] = useState(false); 
     const [showNotification, setShowNotification] = useState(true); 
@@ -41,6 +41,7 @@ function FirstScene() {
 
     const handleCloseFloatingWindow = () => {
         setShowFloatingWindow(false);
+        onSceneChange(); // Cambiar a la siguiente escena
     };
 
     return (
@@ -70,7 +71,7 @@ function FirstScene() {
                         isWarningWindow={true}
                         Content={floatingWindow[0].TextContent}
                         Styles={floatingWindow[0].Styles}
-                        handleCloseButton={handleCloseFloatingWindow}
+                        handleCloseButton={handleCloseFloatingWindow} // Llamamos a la función de cambio de escena
                         TextSpeed={30}
                         Cursor={false}
                     />
