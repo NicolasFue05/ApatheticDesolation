@@ -81,3 +81,16 @@ export const chatsMessages = [
         ]
     }
 ]
+
+export const floatingWindow = [
+    {
+        Title: 'antivirus.exe',
+        StartingPosition: { x: 150, y:150 },
+        TextContent: [
+            'Oh no... It seems that our software has detected a threat on your device :( ...'
+        ],
+        Styles: {
+            width: 440
+        }
+    }
+]

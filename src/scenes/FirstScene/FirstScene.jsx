@@ -1,49 +1,51 @@
 import React, { useState } from "react";
-import { notification } from "../../Constants/CurrentConstants.jsx";
+import { notification, floatingWindow } from "../../Constants/CurrentConstants.jsx";
 import { Notification } from '../../components/Notification/Notification.jsx';
 import { Chat } from '../../components/Chat/Chat.jsx';
-// import { FloatingWindow } from "../../components/Window/FloatingWindow.jsx";
+import { FloatingWindow } from '../../components/Window/FloatingWindow.jsx';
 
 import './FirstScene.css';
 
 function FirstScene() {
-    const [isHidden, setIsHidden] = useState(false); // Controla la animación de ocultado
-    const [showChat, setShowChat] = useState(false); // Controla si el chat se muestra
-    const [showNotification, setShowNotification] = useState(true); // Controla si la notificación está visible
-    const [notificationIndex, setNotificationIndex] = useState(0); // Controla qué notificación se está mostrando
+    const [isHidden, setIsHidden] = useState(false); 
+    const [showChat, setShowChat] = useState(false); 
+    const [showNotification, setShowNotification] = useState(true); 
+    const [notificationIndex, setNotificationIndex] = useState(0); 
+    const [glitchEffect, setGlitchEffect] = useState(false); 
+    const [showFloatingWindow, setShowFloatingWindow] = useState(false); 
 
     const handleCloseChat = () => {
-        setShowChat(false); // Ocultar el chat cuando se cierra
-        setIsHidden(false); // Resetea la animación de la notificación
+        setShowChat(false);
+        setIsHidden(false);
+
         setTimeout(() => {
-            setNotificationIndex(1); // Cambia al índice de la segunda notificación
-            setShowNotification(true); // Muestra la segunda notificación
-        }, 1000); // Espera 1 segundo después de cerrar el chat
+            if (notificationIndex === 0) {
+                setNotificationIndex(1);
+                setShowNotification(true);
+                setGlitchEffect(true);
+            } else {
+                setShowFloatingWindow(true); 
+                setGlitchEffect(false); 
+            }
+        }, 1000);
     };
 
     const handleShowChat = () => {
-        setIsHidden(true); // Inicia la animación para ocultar la notificación
+        setIsHidden(true);
 
-        // Espera el tiempo de la animación antes de cambiar a mostrar el chat
         setTimeout(() => {
-            setShowNotification(false); // Ocultar la notificación
-            setShowChat(true); // Mostrar el chat
-        }, 1000); // Duración de la animación de la notificación (1 segundo)
+            setShowNotification(false);
+            setShowChat(true);
+        }, 1000);
     };
 
-    // Recreation Floating Window
-    // const floatingWindows = [
-    //     {
-    //         WindowTitle: "extec.exe",
-    //         Width: 150,
-    //         StartingPosition: { x: 500, y: 150 }
-    //     }
-    // ]
-
+    const handleCloseFloatingWindow = () => {
+        setShowFloatingWindow(false);
+    };
 
     return (
         <>
-            <section className="FirstScene">
+            <section className={`FirstScene ${glitchEffect ? 'glitch-effect' : ''}`}>
                 {showNotification && !showChat && (
                     <Notification
                         className={`notification-1 ${isHidden ? 'hide' : ''}`}
@@ -57,15 +59,22 @@ function FirstScene() {
                     <Chat
                         className="chat-1"
                         Username={notification[notificationIndex].username}
-                        onClose={handleCloseChat} // Pasamos la función para cerrar el chat
+                        onClose={handleCloseChat}
                     />
                 )}
 
-                {/* <FloatingWindow 
-                    WindowTitle={floatingWindows[0].WindowTitle}
-                    StartingPosition={floatingWindows[0].StartingPosition}
-                /> */}
-
+                {showFloatingWindow && (
+                    <FloatingWindow 
+                        Title={floatingWindow[0].Title}
+                        StartingPosition={floatingWindow[0].StartingPosition}
+                        isWarningWindow={true}
+                        Content={floatingWindow[0].TextContent}
+                        Styles={floatingWindow[0].Styles}
+                        handleCloseButton={handleCloseFloatingWindow}
+                        TextSpeed={30}
+                        Cursor={false}
+                    />
+                )}
             </section>
         </>
     );

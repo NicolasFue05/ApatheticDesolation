@@ -1,0 +1,64 @@
+/* Estilos generales para la ventana flotante */
+.floating-window {
+    position: absolute;
+    border: 1px solid #000;
+    background-color: #000;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    /* width: 300px; */
+    /* height: 200px; */
+    z-index: 10; /* Asegura que la ventana esté por encima de otros elementos */
+}
+
+/* Barra de título de la ventana (solo área de arrastre) */
+.title-bar-closebtn {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    cursor: move;  /* Indica que la barra de título es arrastrable */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.closebtn-floatingwindow {
+    cursor: pointer;
+    border: none;
+    background-color: #333;
+}
+
+
+/* Contenido de la ventana */
+.window-content {
+    color: #fff;
+    display: flex;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.window-content img {
+    margin-right: 17px;
+}
+
+.window-text-content {
+    width: 350px;
+    /* background-color:  */    
+}
+
+.text-content-0 {
+    /* width: 66px; */
+    display: inline-block;
+    /* background-color: red; */
+    border-right: 5px solid;
+
+    animation: cursor .4s step-end infinite alternate;
+}
+
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+}
