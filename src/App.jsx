@@ -13,8 +13,9 @@ function App() {
 
   return (
     <>
-      {currentScene === 'first' && <FirstScene onSceneChange={onSceneChange} />} {/* Renderiza la primera escena */}
-      {currentScene === 'second' && <SecondScene />} {/* Renderiza la segunda escena */}
+      {/* {currentScene === 'first' && <FirstScene onSceneChange={onSceneChange} />} Renderiza la primera escena */}
+      {/* {currentScene === 'second' && <SecondScene />} Renderiza la segunda escena */}
+      <SecondScene />
     </>
   );
 }
