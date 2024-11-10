@@ -85,12 +85,112 @@ export const chatsMessages = [
 export const floatingWindow = [
     {
         Title: 'antivirus.exe',
-        StartingPosition: { x: 150, y:150 },
+        StartingPosition: { x: 1050, y:150 },
         TextContent: [
             'Oh no... It seems that our software has detected a threat on your device :( ...'
         ],
+        TextStyles : {
+            fontSize: 20
+        },
         Styles: {
             width: 440
+        }
+    },
+    {
+        Title: 'whysoserious.exe',
+        StartingPosition: { x: 1000, y: 500 },
+        TextContent: [
+            `Our new model can take you to places you never thought you would go, come on, what are you waiting for? Ᏽ𐌄𐌕 Ꝋ𐌵𐌕 Ꝋ𐌅 𐌙Ꝋ𐌵𐌓 𐌂Ꝋ𐌌𐌅Ꝋ𐌓𐌕 ⱿꝊ𐌍𐌄 !!`,
+        ],
+        TextStyles : {
+            fontSize: 24
+        },
+        Styles: {
+            width: 740
+        }
+    },
+    {
+        StartingPosition: { x: 100, y: 100 },
+        TextStyles : {
+            fontSize: 10
+        },
+        Styles: {
+            width: 800,
+            height: 650,
+        }
+    },
+    {
+        StartingPosition: { x: 980, y: 30 },
+        TextStyles : {
+            fontSize: 14
+        },
+        Styles: {
+            width: 600,
+        }
+    },
+    {
+        Title: 'Looking to feel something?',
+        StartingPosition: { x: 333, y: 600 },
+        TextStyles : {
+            fontSize: 20
+        },
+        TitleStyles : {
+            fontSize: 20
+        },
+        Styles: {
+            width: 330
+        }
+    },
+    {
+        StartingPosition: { x: 500, y: 300 },
+        TextStyles : {
+            fontSize: 20
+        },
+        Styles: {
+            width: 2000
+        }
+    },
+    {
+        StartingPosition: { x: 1200, y: 400 },
+        TextStyles : {
+            fontSize: 20
+        },
+        TitleStyles : {
+            fontSize: 20
+        },
+        Styles: {
+            width: 330
+        }
+    },
+    {
+        StartingPosition: { x: 800, y: 400 },
+        TextStyles : {
+            fontSize: 20
+        },
+        TitleStyles : {
+            fontSize: 20
+        },
+        Styles: {
+            width: 330
+        }
+    },
+    {
+        StartingPosition: { x: 100, y: 50 },
+        TextStyles : {
+            fontSize: 10
+        },
+        Styles: {
+            width: 800,
+            height: 650,
+        }
+    },
+    {
+        StartingPosition: { x: 980, y: 30 },
+        TextStyles : {
+            fontSize: 14
+        },
+        Styles: {
+            width: 600,
         }
     }
 ]

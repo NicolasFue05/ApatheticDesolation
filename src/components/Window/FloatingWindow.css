@@ -1,35 +1,37 @@
 /* Estilos generales para la ventana flotante */
 .floating-window {
-    position: absolute;
+    position: fixed;
     border: 1px solid #000;
     background-color: #000;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    /* width: 300px; */
-    /* height: 200px; */
-    z-index: 10; /* Asegura que la ventana esté por encima de otros elementos */
+    /* width: auto; Ajusta automáticamente según contenido */
+    /* height: auto; Ajusta automáticamente según contenido */
+    /* max-width: 400px; Opcional: limitar el ancho */
+    z-index: 20; /* Mayor z-index para asegurar visibilidad */
+    /* padding: 10px; */
 }
 
 /* Barra de título de la ventana (solo área de arrastre) */
 .title-bar-closebtn {
-    height: 40px;
+    /* height: 40px; */
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #333;
     color: white;
     padding: 10px;
-    cursor: move;  /* Indica que la barra de título es arrastrable */
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    cursor: move;
+    /* border-top-left-radius: 10px; */
+    /* border-top-right-radius: 10px; */
 }
 
 .closebtn-floatingwindow {
     cursor: pointer;
     border: none;
     background-color: #333;
+    color: white; /* Agregar color si es necesario */
 }
-
 
 /* Contenido de la ventana */
 .window-content {
@@ -45,15 +47,13 @@
 
 .window-text-content {
     width: 350px;
-    /* background-color:  */    
+    color: white; /* Texto en blanco para contraste */
 }
 
+/* Efecto de cursor intermitente */
 .text-content-0 {
-    /* width: 66px; */
     display: inline-block;
-    /* background-color: red; */
-    border-right: 5px solid;
-
+    border-right: 5px solid white;
     animation: cursor .4s step-end infinite alternate;
 }
 

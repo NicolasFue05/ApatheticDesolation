@@ -9,7 +9,7 @@ import './FirstScene.css';
 function FirstScene({ onSceneChange }) {
     const [isHidden, setIsHidden] = useState(false); 
     const [showChat, setShowChat] = useState(false); 
-    const [showNotification, setShowNotification] = useState(true); 
+    const [showNotification, setShowNotification] = useState(true);
     const [notificationIndex, setNotificationIndex] = useState(0); 
     const [glitchEffect, setGlitchEffect] = useState(false); 
     const [showFloatingWindow, setShowFloatingWindow] = useState(false); 
@@ -41,7 +41,7 @@ function FirstScene({ onSceneChange }) {
 
     const handleCloseFloatingWindow = () => {
         setShowFloatingWindow(false);
-        onSceneChange(); // Cambiar a la siguiente escena
+        onSceneChange(); 
     };
 
     return (
@@ -68,11 +68,12 @@ function FirstScene({ onSceneChange }) {
                     <FloatingWindow 
                         Title={floatingWindow[0].Title}
                         StartingPosition={floatingWindow[0].StartingPosition}
-                        isWarningWindow={true}
+                        isErrorWindow={true}
                         Content={floatingWindow[0].TextContent}
                         Styles={floatingWindow[0].Styles}
-                        handleCloseButton={handleCloseFloatingWindow} // Llamamos a la función de cambio de escena
+                        handleCloseButton={handleCloseFloatingWindow}
                         TextSpeed={30}
+                        TextStyles={floatingWindow[0].TextStyles}
                         Cursor={false}
                     />
                 )}

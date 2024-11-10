@@ -1,11 +1,12 @@
 import React, { useRef } from "react";
-import Draggable from "react-draggable";
-import './FloatingWindow.css';
 import { TypeAnimation } from "react-type-animation";
+import Draggable from "react-draggable";
 import XIcon from '../../assets/X.svg'
+import TeslaCar from '../../assets/TeslaCar.png'
 import ErrorIcon from '../../assets/ErrorIcon.svg'
+import './FloatingWindow.css';
 
-export function FloatingWindow({ Title, StartingPosition, Content, isWarningWindow, Styles, TextSpeed, Cursor , handleCloseButton }) {
+export function FloatingWindow({ Title, StartingPosition, Content, isErrorWindow, isVirusWindowCar, TextStyles, Styles, TextSpeed, Cursor , handleCloseButton }) {
 
     const nodeRef = useRef(null);
 
@@ -24,19 +25,22 @@ export function FloatingWindow({ Title, StartingPosition, Content, isWarningWind
                     </button>
                 </div>
                 <div className="window-content">
-                    {isWarningWindow ? 
-                        <img src={ErrorIcon} alt="" />
+                    {isErrorWindow ? 
+                        <img src={ErrorIcon}  />
                         : null} 
+                    {isVirusWindowCar ?
+                        <img src={TeslaCar} width={350} />
+                    : null}
                         <div className="window-text-content">
-                            {Content.length > 0 && isWarningWindow ? 
+                            {Content.length > 0 && 
                                 <TypeAnimation 
                                     sequence={Content}
                                     speed={TextSpeed}
-                                    style={{fontSize: '20px'}}
-                                    repeat={null}
+                                    style={TextStyles}
+                                    repeat={false}
                                     cursor={Cursor}
                                 />
-                            : null}
+                            }
                         </div>
                 </div>
             </div>
