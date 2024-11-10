@@ -21,10 +21,10 @@ function App() {
 
   return (
     <>
-      {/* {currentScene === 'first' && <FirstScene onSceneChange={onSceneChange} />}  */}
-      {/* {currentScene === 'second' && <SecondScene  onSceneChange={onSceneChange} />} */}
-      {/* {currentScene === 'third' && <ThirdScene />} */}
-      <ThirdScene />
+      {currentScene === 'first' && <FirstScene onSceneChange={onSceneChange} />} 
+      {currentScene === 'second' && <SecondScene  onSceneChange={onSceneChange} />}
+      {currentScene === 'third' && <ThirdScene />}
+      {/* <ThirdScene /> */}
     </>
   );
 }
