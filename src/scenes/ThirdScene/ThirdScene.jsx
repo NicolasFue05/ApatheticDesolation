@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ThirdScene.css'
 import Glitch1 from '../../assets/Glitch1.mp4'
 
 
 export function ThirdScene() {
+
     return (
         <div className="ThirdScene">
             {/*Video de fondo*/}

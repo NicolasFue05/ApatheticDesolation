@@ -1,30 +1,29 @@
 import React, { useState } from 'react';
 import './styles/App.css';
-import FirstScene from './scenes/FirstScene/FirstScene';
+import { Home } from './scenes/Home/Home';
+import FirstScene  from './scenes/FirstScene/FirstScene';
 import { SecondScene } from './scenes/SecondScene/SecondScene';
 import { ThirdScene } from './scenes/ThirdScene/ThirdScene';
 
 function App() {
-  // Estado para controlar la escena actual
-  const [currentScene, setCurrentScene] = useState('first');
+  const [currentScene, setCurrentScene] = useState('home');
 
-  // Función para cambiar la escena
   const onSceneChange = () => {
-    // Cambiar a switch para manejo de mas escenas
-    if(currentScene === 'first'){
+    if (currentScene === 'home') {
+      setCurrentScene('first');
+    } else if (currentScene === 'first') {
       setCurrentScene('second');
-    } else if(currentScene === 'second'){
+    } else if (currentScene === 'second') {
       setCurrentScene('third');
     }
-    
   };
 
   return (
     <>
-      {currentScene === 'first' && <FirstScene onSceneChange={onSceneChange} />} 
-      {currentScene === 'second' && <SecondScene  onSceneChange={onSceneChange} />}
+      {currentScene === 'home' && <Home onSceneChange={onSceneChange} />}
+      {currentScene === 'first' && <FirstScene onSceneChange={onSceneChange} />}
+      {currentScene === 'second' && <SecondScene onSceneChange={onSceneChange} />}
       {currentScene === 'third' && <ThirdScene />}
-      {/* <ThirdScene /> */}
     </>
   );
 }
