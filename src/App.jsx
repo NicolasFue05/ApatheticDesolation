@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import './styles/App.css';
 import { Home } from './scenes/Home/Home';
 import FirstScene  from './scenes/FirstScene/FirstScene';
 import { SecondScene } from './scenes/SecondScene/SecondScene';
