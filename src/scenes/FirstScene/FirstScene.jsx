@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import { notification, floatingWindow } from "../../Constants/CurrentConstants.jsx";
+/* eslint-disable react/prop-types */
+import { useState } from "react";
+import { notification, floatingWindow } from "../../constants/CurrentConstants.jsx";
 import { Notification } from '../../components/Notification/Notification.jsx';
 import { Chat } from '../../components/Chat/Chat.jsx';
 import { FloatingWindow } from '../../components/Window/FloatingWindow.jsx';

@@ -1,4 +1,5 @@
-import React, { useRef } from "react";
+/* eslint-disable react/prop-types */
+import { useRef } from "react";
 import { TypeAnimation } from "react-type-animation";
 import Draggable from "react-draggable";
 import XIcon from '../../assets/X.svg'

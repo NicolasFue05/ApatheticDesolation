@@ -194,3 +194,28 @@ export const floatingWindow = [
         }
     }
 ]
+
+export const terminalDialog = [
+    // Primer dialogo antes de que el usuario ponga su nombre
+    {
+        TextContent: [
+            "Oh no... This looks too bad",
+            1000,
+            "What kind of shit did you download?",
+            2000,
+            "Oh... Excuse my manners, I'm ARGOX, I know you'll be a bit confused...",
+            2000,
+            "but I am, let's say... an artificial intelligence that came with your computer.",
+            3000,
+            "Ok, Ok, I know that after everything you've seen you don't trust me, but hey, buddy, I'm here to help you.",
+            4000,
+            "First of all, manners, I already told you my name, so... How about you tell me yours?",
+            3000,
+            "Type your name into the command prompt, it's the little bar you see below, then hit enter, by the way, that's what we'll use to try to remove... Whatever is causing this."
+
+        ],
+        TextStyles : {
+            fontSize: 20
+        }
+    }
+]

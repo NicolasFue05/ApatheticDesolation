@@ -1,0 +1,46 @@
+.terminal-container {
+    width: 680px;
+    height: 380px;
+    background-color: #000;
+    border: 1px solid #fff;
+    position: fixed;
+    box-shadow: 0px 0px 5px #fff;
+    top: 250px;
+    left: 350px;
+    padding: 30px;
+}
+
+.terminal-logo-text-container img {
+    width: 300px;
+}
+
+.terminal-text-content {
+    width: 100%;
+}
+
+.terminal-logo-text-container {
+    display: flex;
+    gap: 50px;
+}
+
+.logo-windows {
+    width: 190px;
+}
+
+.terminal-image-input {
+    display: flex;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.terminal-image-input input {
+    width: 80%;
+    background-color: black;
+    color: white;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    border-radius: 5px;
+    padding-left: 10px;
+}

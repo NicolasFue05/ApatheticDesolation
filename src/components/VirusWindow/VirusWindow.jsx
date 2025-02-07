@@ -1,5 +1,5 @@
-// VirusWindow.js
-import React, { useRef } from "react";
+/* eslint-disable react/prop-types */
+import { useRef } from "react";
 import Draggable from "react-draggable";
 import XIcon from '../../assets/X.svg';
 import { TypeAnimation } from "react-type-animation";

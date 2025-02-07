@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+/* eslint-disable react/prop-types */
+import { useState, useEffect } from "react";
 import './SecondScene.css';
 import { FloatingWindow } from '../../components/Window/FloatingWindow';
-import { floatingWindow } from '../../Constants/CurrentConstants';
+import { floatingWindow } from '../../constants/CurrentConstants';
 import { VirusWindow } from '../../components/VirusWindow/VirusWindow';
 import PureVideo from '../../assets/DoYouWannaBePure.mp4';
 import PornAd from '../../assets/PornAd.png';

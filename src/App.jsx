@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import './styles/App.css';
-import { Home } from './scenes/Home/Home';
-import FirstScene  from './scenes/FirstScene/FirstScene';
-import { SecondScene } from './scenes/SecondScene/SecondScene';
+import { useState } from 'react';
+//import './styles/App.css';
+//import { Home } from './scenes/Home/Home';
+//import FirstScene  from './scenes/FirstScene/FirstScene';
+//import { SecondScene } from './scenes/SecondScene/SecondScene';
 import { ThirdScene } from './scenes/ThirdScene/ThirdScene';
 
 function App() {
@@ -20,10 +20,11 @@ function App() {
 
   return (
     <>
-      {currentScene === 'home' && <Home onSceneChange={onSceneChange} />}
-      {currentScene === 'first' && <FirstScene onSceneChange={onSceneChange} />}
-      {currentScene === 'second' && <SecondScene onSceneChange={onSceneChange} />}
-      {currentScene === 'third' && <ThirdScene />}
+      {/*currentScene === 'home' && <Home onSceneChange={onSceneChange} />*/}
+      {/*currentScene === 'first' && <FirstScene onSceneChange={onSceneChange} />*/}
+      {/*currentScene === 'second' && <SecondScene onSceneChange={onSceneChange} />*/}
+      {/*currentScene === 'third' && <ThirdScene />*/}
+      <ThirdScene />
     </>
   );
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import XIcon from '../../assets/X.svg';
 import SendIcon from '../../assets/send.svg';
-import { chatsMessages } from '../../Constants/CurrentConstants';
+import { chatsMessages } from '../../constants/CurrentConstants';
 import './Chat.css';
 
 export function Chat({ Username, onClose }) {
